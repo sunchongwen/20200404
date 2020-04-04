@@ -1,25 +1,27 @@
-# 20200404
-1.登录
-POST /user/login
+# 20200404 
+# **1.登录**
+#### Post /User/Login
 
-request
-
+###### request
+```
 Content-Type: application/json
 
 {
 	"username":"admin",
 	"password":"admin",
 }
-response
-
+```
+###### response
+```
 fail
 
 {
     "status": 1,
     "msg": "密码错误"
 }
+```
 success
-
+```
 {
     "status": 0,
     "data": {
@@ -32,40 +34,51 @@ success
         "updateTime": 1479048325000
     }
 }
-2.注册
-POST /user/register
+```
+# **2.注册**
+##### POST /user/register
 
-request
-
+###### request
+```
 {
 	"username":"admin",
 	"password":"admin",
 	"email":"admin@qq.com"
 }
-response
+```
+##### response
 
 success
-
+```
 {
     "status": 0,
     "msg": "校验成功"
 }
+```
 fail
-
+```
 {
     "status": 2,
     "msg": "用户已存在"
 }
-3.获取登录用户信息
-GET /user
+```
+# **3.获取登录用户信息**
+#### GET /user
+**POST /user/logout
 
+##### request
+response
 request
+response
 
 无参数
+##### request
+response
+request
 response
 
 success
-
+```
 {
     "status": 0,
     "data": {
@@ -78,30 +91,40 @@ success
         "updateTime": 1479048325000
     }
 }
+```
 fail
-
+```
 {
     "status": 10,
     "msg": "用户未登录,无法获取当前用户信息"
 }
-
-4.退出登录
+```
+# **4.退出登录**
+#### GET /user
 **POST /user/logout
 
-request
+##### request
+##### response
+##### request
+##### response
 
 无
-response
+##### request
+##### response
+##### request
+##### response
 
 success
-
+```
 {
     "status": 0,
     "msg": "退出成功"
 }
+```
 fail
-
+```
 {
     "status": -1,
     "msg": "服务端异常"
 }
+```
